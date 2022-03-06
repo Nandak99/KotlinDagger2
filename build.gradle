@@ -37,3 +37,6 @@ tasks.all {
 tasks.register("assembleAllRelease") {
     dependsOn assembleAllRelease
 }
+tasks.register("assembleDebug") {
+    dependsOn assembleDebug
+}
