@@ -26,3 +26,14 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+def assembleAllRelease = []
+
+tasks.all {
+    if (it.name.contains("assembleRelease")) {
+        assembleAllRelease.add(it)
+    }
+}
+
+tasks.register("assembleAllRelease") {
+    dependsOn assembleAllRelease
+}
