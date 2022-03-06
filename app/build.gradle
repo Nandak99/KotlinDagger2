@@ -20,18 +20,10 @@ android {
         debug {
             applicationIdSuffix ".debug"
         }
-        staging {
-            applicationIdSuffix ".staging"
-            signingConfig signingConfigs.staging
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-        }
  
         release {
-            applicationIdSuffix ".release"
-            signingConfig signingConfigs.release
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 }
